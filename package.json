@@ -1,0 +1,18 @@
+{
+  "name": "xiuxian-game",
+  "version": "1.0.0",
+  "private": true,
+  "description": "青云问道 - 3D 开放世界修仙游戏 (three.js)",
+  "scripts": {
+    "build:worker": "esbuild src/human/worker.js --bundle --format=iife --target=es2020 --minify --outfile=build/hworker.wjs",
+    "build": "npm run build:worker && esbuild src/main.js --bundle --format=iife --target=es2020 --minify --loader:.wjs=text --outfile=dist/game.js",
+    "build:dev": "npm run build:worker && esbuild src/main.js --bundle --format=iife --target=es2020 --sourcemap --loader:.wjs=text --outfile=dist/game.js",
+    "dev": "npm run build:worker && esbuild src/main.js --bundle --format=iife --target=es2020 --sourcemap --loader:.wjs=text --outfile=dist/game.js --watch --servedir=."
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
