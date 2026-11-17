@@ -281,7 +281,7 @@ npm run preview      # http://127.0.0.1:8123/
 
 ## License
 
-[MIT](LICENSE) © 2026 binghong
+[MIT](LICENSE) © 2026 NorwinYu
 
 <div align="center">
 <sub>Made with <strong>Fable 5.2</strong> &amp; <strong>Opus 5.5</strong> · three.js · esbuild</sub>
