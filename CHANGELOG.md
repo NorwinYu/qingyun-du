@@ -27,11 +27,13 @@
 ### 文档与工程
 
 - 新增 `README.md`：玩法亮点、截图、快速开始、操作、技术实现与文档索引。
+- README 重写为项目主页版式：玩法叙事、分组截图、技术速览与「制作方式」模型说明。
 - 玩法说明迁移并重组为 [`docs/gameplay.md`](docs/gameplay.md)，按“世界观 / 修行 / 战斗 / 生活 / 系统”重新分章。
 - 新增 [`docs/development.md`](docs/development.md)：架构、模块、构建、调试接口、测试与技术债。
 - 新增 [`docs/deployment.md`](docs/deployment.md)：GitHub Pages 的 Actions 与分支两种部署方式。
 - 新增 GitHub Actions 自动部署工作流与 MIT License。
 - 新增 `npm test`、`npm run preview` 脚本；`package.json` 更名为 `qingyun-du`。
+- 测试脚本会先构建人物 Worker，保证 CI 环境也能运行回归测试。
 - 补充 7 张实际游戏截图（`docs/screenshots/`）。
 
 ### 兼容性说明

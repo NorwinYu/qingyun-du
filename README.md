@@ -2,64 +2,241 @@
 
 <img src="docs/screenshots/hero.jpg" alt="青云渡 · 标题画面" width="100%">
 
-# 青云渡
+<h1>青云渡</h1>
 
-**御剑乘风 · 渡劫长生**
+<p><code>QINGYUN&nbsp;&nbsp;CROSSING</code></p>
 
-一个纯前端、零外部美术资源的 3D 开放世界修仙 Demo。
-从凡人打坐到金丹渡劫，全部跑在浏览器里。
+<p><strong>御剑乘风，渡劫长生。</strong><br>
+由 <strong>Fable 5.2</strong> 与 <strong>Opus 5.5</strong> 参与生成，打开浏览器就能玩的 3D 开放世界修仙 Demo。</p>
 
-[![在线试玩](https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9-Qingyun%20Crossing-8a6d2f?style=flat-square)](https://norwinyu.github.io/qingyun-du/)
-[![three.js](https://img.shields.io/badge/three.js-r187-1a1a2e?style=flat-square)](https://threejs.org/)
-[![WebGL2](https://img.shields.io/badge/WebGL-2.0-e0722f?style=flat-square)](https://www.khronos.org/webgl/)
-[![License](https://img.shields.io/badge/license-MIT-3a9d5d?style=flat-square)](LICENSE)
-[![Pages](https://img.shields.io/badge/GitHub%20Pages-ready-2ea44f?style=flat-square)](docs/deployment.md)
+<p>
+  <a href="https://norwinyu.github.io/qingyun-du/"><img src="https://img.shields.io/badge/%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9-%E9%9D%92%E4%BA%91%E6%B8%A1-8a6d2f?style=for-the-badge" alt="在线试玩"></a>
+  <img src="https://img.shields.io/badge/AI-Fable%205.2%20%2B%20Opus%205.5-6b4fbb?style=for-the-badge" alt="AI 生成">
+  <img src="https://img.shields.io/badge/three.js-r187-1a1a2e?style=for-the-badge" alt="three.js">
+  <img src="https://img.shields.io/badge/license-MIT-3a9d5d?style=for-the-badge" alt="MIT">
+</p>
 
-[玩法指南](docs/gameplay.md) · [开发文档](docs/development.md) · [部署说明](docs/deployment.md) · [更新日志](CHANGELOG.md)
+<p>
+  <a href="#这是什么">这是什么</a> ·
+  <a href="#玩法">玩法</a> ·
+  <a href="#截图">截图</a> ·
+  <a href="#操作">操作</a> ·
+  <a href="#技术">技术</a> ·
+  <a href="#制作方式">制作方式</a> ·
+  <a href="#开始游玩">开始游玩</a>
+</p>
 
 </div>
 
 ---
 
-## 为什么叫「青云渡」
-
-故事从青云村外的一座石桥开始。**渡**，是过桥，是渡河，也是渡劫——
-从凡人渡过炼气、筑基，最后在九霄雷劫中渡成金丹。
-
-> 青云之上，一剑渡长生。
-
-英文名 *Qingyun Crossing*，仓库名 `qingyun-du`。
-
 ## 这是什么
 
-《青云渡》是一个可以直接在浏览器里玩的单人第三人称修仙 Demo，使用 three.js 从零搭建：
+**《青云渡》是一个单人、第三人称、纯前端的 3D 开放世界修仙游戏。**
 
-- **开放世界**：青云村、落霞镇、翠竹海、古修遗迹、万妖谷、赤焰火山、浮空仙山、雷劫台，可徒步、轻功、游泳、御剑。
-- **完整成长线**：测灵根 → 打坐 → 突破 → 筑基小天劫 → 金丹九霄雷劫，当前上限为**金丹初期**。
-- **动作战斗**：三段连斩、剑气、格挡弹反、完美闪避、处决，以及四门可参悟的功法。
-- **修仙生活**：采药、炼丹、炼器、种灵田、河边垂钓、悬赏榜、护送行商、宗门宝库。
-- **随机性**：五层秘境 + 三选一增益、五档装备品质与随机词条、六类精英词缀。
-- **全部程序化**：地形、树木、建筑、人物、贴图、音效均由代码生成，没有任何外部模型或图片素材。
+故事从青云村外的一座石桥开始。你是一个刚醒来的凡人，进村、拜见村长、测灵根、打坐引气，
+然后一路走过古修遗迹、落霞镇、万妖谷、赤焰火山与浮空仙山，直到在雷劫台渡过九霄天雷。
+
+「渡」是过桥，是渡河，也是渡劫。
+
+<table>
+<tr>
+<td width="25%" align="center"><strong>类型</strong><br><sub>开放世界 · 动作修仙</sub></td>
+<td width="25%" align="center"><strong>平台</strong><br><sub>浏览器 · 键鼠</sub></td>
+<td width="25%" align="center"><strong>引擎</strong><br><sub>three.js · WebGL2</sub></td>
+<td width="25%" align="center"><strong>体量</strong><br><sub>单文件 1.3 MB</sub></td>
+</tr>
+</table>
+
+没有客户端，没有服务器，没有外部美术资源。地形、建筑、人物、贴图、音效全部在运行时生成，
+整个游戏就是 `index.html` 加一个 `dist/game.js`。
+
+---
+
+## 玩法
+
+### 世界是走出来的
+
+青云村、落霞镇、翠竹海、古修遗迹、万妖谷、赤焰火山、浮空仙山、雷劫台——
+八片区域连成一张无缝地图，昼夜与晴雨实时变化。徒步、疾行、二段跳、轻功滑翔、游泳，
+筑基之后还可以御剑飞上云端。
+
+<table>
+<tr>
+<td width="55%"><img src="docs/screenshots/world.jpg" alt="青云村与青云河" width="100%"></td>
+<td width="45%" valign="middle">
+
+**从石桥进村**<br>
+<sub>河、桥、酒肆、灵田、码头、传送阵，一座能生活的小村庄。</sub>
+
+**八片地貌**<br>
+<sub>竹林、雪山、火山、妖谷、浮空岛，各有自己的物产与危险。</sub>
+
+**天气会改变玩法**<br>
+<sub>雨天灵田长得更快，金鳞龙鱼在雨夜更容易出现。</sub>
+
+</td>
+</tr>
+</table>
+
+### 战斗是打出来的
+
+不是站桩丢技能。轻击可以连成**三段连斩**，右键**弹反**敌人出手，`V` **瞬身**躲过致命一击并触发子弹时间，
+打出破绽后靠近可以**处决**。四门功法——剑气、瞬身、金光护体、万剑归宗——构成一套能打连招的动作体系。
+
+敌人会带**狂暴、坚甲、迅捷、嗜血、爆裂、寒霜**六类精英词缀；首领有独立阶段、召唤与范围技。
+野外、秘境、天劫里各有一套战斗节奏。
+
+<table>
+<tr>
+<td width="45%" valign="middle">
+
+**镇墓石灵**<br>
+<sub>古修遗迹的守关首领，重击前摇明显，贪刀要付出代价。</sub>
+
+**镜中剑魔**<br>
+<sub>秘境第五层的最终对手，剑势比石灵更快。</sub>
+
+**心魔**<br>
+<sub>金丹雷劫之后出现——“斩不断的，从来都是自己。”</sub>
+
+</td>
+<td width="55%"><img src="docs/screenshots/combat.jpg" alt="古修遗迹首领战" width="100%"></td>
+</tr>
+</table>
+
+### 修行是坐出来的
+
+测灵根是随机的：金、木、水、火、土，以及稀有的**雷灵根**；灵根品阶还会影响修为速度。
+在聚灵台、古修遗迹、雷劫台、浮空仙山打坐，灵气倍率从 2 倍到 8 倍不等。
+修为圆满后按 `B` 突破，炼气九层渡小天劫，筑基圆满渡九道天雷。
+
+<table>
+<tr>
+<td width="55%"><img src="docs/screenshots/flight.jpg" alt="御剑浮空仙山" width="100%"></td>
+<td width="45%" valign="middle">
+
+**御剑**<br>
+<sub>筑基并完成云鹤的任务后按 F 起飞，穿越十四道灵环。</sub>
+
+**渡劫**<br>
+<sub>天雷会锁定落点，瞬身是唯一的解法；渡劫时不能御剑逃跑。</sub>
+
+**金丹**<br>
+<sub>当前版本的终点，也是下一段旅程的起点。</sub>
+
+</td>
+</tr>
+</table>
+
+### 也可以只是过日子
+
+采药、炼丹、炼器、种六块灵田、在码头钓一整天鱼、接悬赏、护送行商、救一只九尾灵狐。
+宗门声望分五级身份，贡献可以换永久被动功法。这些不是点缀——炼丹决定你能不能筑基，
+灵田决定你多久能凑齐筑基丹的材料。
+
+<table>
+<tr>
+<td width="33.3%"><img src="docs/screenshots/meditate.jpg" alt="聚灵台打坐" width="100%"><br><sub><strong>聚灵台 · 酉时打坐</strong><br>灵气 ×4，桃花与晚霞</sub></td>
+<td width="33.3%"><img src="docs/screenshots/night.jpg" alt="青云村夜景" width="100%"><br><sub><strong>青云村 · 亥时</strong><br>灯笼亮起，流星偶尔坠地</sub></td>
+<td width="33.3%"><img src="docs/screenshots/creator.jpg" alt="角色定制" width="100%"><br><sub><strong>入道 · 角色定制</strong><br>性别、发型、衣着、配色</sub></td>
+</tr>
+</table>
+
+### 每次进去都不一样
+
+- **秘境**：五层云端试炼，每层随机布局与敌人组合，清层后三选一增益，末层挑战镜中剑魔。
+- **装备**：五档品质、三个部位、随机词条；精英必掉灵宝，首领掉得更好。
+- **悬赏**：每游戏日刷新，击杀、采集、钓鱼、护送、精英，五种委托。
+- **奇遇**：五处古修残魂、古修遗匣、仙山宝匣、夜间流星。
+
+七章主线依次是：**青云初醒 → 遗迹石灵 → 落霞风云 → 万妖谷 → 铸就道基 → 炎阳遗恨 → 九霄雷劫**。
+通关后仍可继续刷装备、刷灵环、刷秘境，或把村子里的日子过下去。
+
+---
 
 ## 截图
 
+<table>
+<tr>
+<td width="50%"><img src="docs/screenshots/world.jpg" alt="青云村" width="100%"><br><sub>青云村 · 石桥与青云河</sub></td>
+<td width="50%"><img src="docs/screenshots/flight.jpg" alt="御剑" width="100%"><br><sub>御剑 · 浮空仙山</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/combat.jpg" alt="首领战" width="100%"><br><sub>古修遗迹 · 镇墓石灵</sub></td>
+<td width="50%"><img src="docs/screenshots/meditate.jpg" alt="打坐" width="100%"><br><sub>聚灵台 · 酉时打坐</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/screenshots/night.jpg" alt="夜景" width="100%"><br><sub>青云村 · 亥时灯会</sub></td>
+<td width="50%"><img src="docs/screenshots/map.jpg" alt="山河舆图" width="100%"><br><sub>山河舆图 · 传送阵</sub></td>
+</tr>
+</table>
+
+> 全部为游戏实际运行画面，`?q=1` 画质，1600×900。原图在 [docs/screenshots](docs/screenshots)。
+
+---
+
+## 操作
+
+| | | | |
+| --- | --- | --- | --- |
+| `WASD` 移动 | `Shift` 疾行 | `空格` 跳跃 / 二段跳 / 滑翔 | 鼠标 视角 |
+| 左键 三段连斩 / 处决 | 右键 格挡 / 弹反 | `Q` 剑气 | `V` 瞬身 |
+| `G` 金光护体 | `R` 万剑归宗 | `E` 交互 / 采集 / 对话 | `C` 打坐 |
+| `B` 突破 | `F` 御剑 | `1` `2` `3` 丹药 | `Tab` 行囊 |
+| `M` 舆图 | `Esc` 菜单 | | |
+
+完整按键、数值与任务路线：[**玩法指南**](docs/gameplay.md)。
+
+---
+
+## 技术
+
 | | |
-|:--:|:--:|
-| <img src="docs/screenshots/world.jpg" alt="青云村与青云河"><br><sub>青云村 · 石桥与青云河</sub> | <img src="docs/screenshots/meditate.jpg" alt="聚灵台打坐"><br><sub>聚灵台 · 酉时打坐（灵气 ×4）</sub> |
-| <img src="docs/screenshots/flight.jpg" alt="御剑浮空仙山"><br><sub>御剑 · 浮空仙山</sub> | <img src="docs/screenshots/night.jpg" alt="村中夜灯"><br><sub>青云村 · 亥时灯会</sub> |
-| <img src="docs/screenshots/combat.jpg" alt="古修遗迹首领战"><br><sub>古修遗迹 · 镇墓石灵</sub> | <img src="docs/screenshots/creator.jpg" alt="开局角色定制"><br><sub>入道 · 角色定制</sub> |
+| --- | --- |
+| **渲染** | three.js r187 / WebGL2，ACES 色调映射、泛光、调色与暗角，PCF 阴影，水面平面反射 |
+| **世界** | 64 m 分块流式地形，远景低模 + 实例化植被，昼夜与天气插值，程序化建筑 |
+| **人物** | 运行时用 SDF 图元拼装网格，Web Worker 构建，程序化骨骼动作与飘带布料 |
+| **美术** | 所有贴图由 Canvas 2D 绘制；所有模型由代码生成；没有一张外部图片 |
+| **音频** | WebAudio 振荡器与噪声合成；没有一个音频文件 |
+| **构建** | esbuild 两段构建：人物 Worker → 文本内联 → 单文件 IIFE |
+| **存档** | localStorage，自动保存 + 手动保存，无后端 |
+| **质量** | `node:test` 30 项回归测试；`npm test` 在 CI 中运行 |
 
-更多界面截图见 [docs/screenshots](docs/screenshots)，包括山河舆图等。
+```
+index.html + dist/game.js  =  整个游戏
+```
 
-## 快速开始
+没有 CDN，没有资源目录，部署只需要两个文件。这也是它能直接放在 GitHub Pages 上的原因。
 
-### 在线游玩
+---
 
-打开 **<https://norwinyu.github.io/qingyun-du/>**（部署后生效，见[部署说明](docs/deployment.md)）。
+## 制作方式
 
-### 本地运行
+这是一个人机协作的产物，模型和分工写在这里：
 
-需要 Node.js 18+：
+<table>
+<tr><td width="22%"><strong>生成模型</strong></td><td><strong>Fable 5.2</strong> 与 <strong>Opus 5.5</strong></td></tr>
+<tr><td><strong>模型生成</strong></td><td>游戏代码、程序化场景与角色、界面、文案与文档初稿</td></tr>
+<tr><td><strong>人的工作</strong></td><td>玩法方向、提示词、试玩、数值与手感调整、回归测试、部署</td></tr>
+<tr><td><strong>验证</strong></td><td>30 项 <code>node:test</code> 全过；真实浏览器截图为证，不是渲染概念图</td></tr>
+</table>
+
+> 模型负责把想法写成能跑的 three.js 代码；人负责判断它好不好玩。
+>
+> 这个项目里没有预渲染的“概念图”——你看到的每一张截图，都是游戏跑起来之后的画面。
+
+---
+
+## 开始游玩
+
+### 在线
+
+**<https://norwinyu.github.io/qingyun-du/>**
+
+推荐最新版 Chrome / Edge / Safari，需要 WebGL2 与键盘鼠标。
+
+### 本地
 
 ```bash
 git clone https://github.com/NorwinYu/qingyun-du.git
@@ -68,126 +245,44 @@ npm install
 npm run dev
 ```
 
-`npm run dev` 会监听源码并启动 esbuild 本地服务，打开 **<http://localhost:8000/>** 即可。
+打开 **<http://localhost:8000/>**。
 
-也可以先构建、再用任意静态服务器预览：
+也可以构建后用静态服务器：
 
 ```bash
 npm run build
 npm run preview      # http://127.0.0.1:8123/
 ```
 
-> 首次加载需要下载约 1.3 MB 的 `dist/game.js`，之后由浏览器缓存。
-> 建议使用最新版 Chrome / Edge / Safari，并确保浏览器支持 WebGL2。
+> 首次加载约 1.3 MB，之后走浏览器缓存。存档保存在当前浏览器，`localhost` 与 Pages 的存档互不相通。
 
-## 操作
+### 部署
 
-| 操作 | 按键 |
-| --- | --- |
-| 移动 / 疾行 | `W A S D` / `Shift` |
-| 视角 / 缩放 | 鼠标移动 / 滚轮（点击画面锁定鼠标） |
-| 跳跃 / 二段跳 / 滑翔 | `空格`（炼气三层后二段跳，下落时按住滑翔） |
-| 普通攻击 | 鼠标左键，连点衔接三段连斩；破绽时靠近可处决 |
-| 格挡 / 弹反 | 按住鼠标右键；敌人出手瞬间按下可弹反 |
-| 剑气 / 瞬身 / 护体 / 万剑归宗 | `Q` / `V` / `G` / `R` |
-| 交互 / 采集 / 对话 / 传送 | `E` |
-| 打坐 / 突破 | `C` / `B` |
-| 御剑飞行 | `F`（筑基后）；飞行中 `空格` 升、`X` 降、`Shift` 加速 |
-| 丹药 / 行囊 / 舆图 / 菜单 | `1` `2` `3` / `Tab` / `M` / `Esc` |
+仓库内置 GitHub Actions。推送到 `main` 后，在 **Settings → Pages → Source** 选择 **GitHub Actions** 即可。
+详见 [部署说明](docs/deployment.md)。
 
-完整操作、玩法与数值说明见 **[玩法指南](docs/gameplay.md)**。
-
-## 项目结构
-
-```text
-qingyun-du/
-├── index.html              # 游戏入口（也是 GitHub Pages 的落地页）
-├── favicon.svg
-├── src/
-│   ├── main.js             # 主循环、场景编排、输入、镜头、调试接口
-│   ├── game.js             # 存档、境界、背包、任务、装备与数值
-│   ├── data.js             # 境界、灵根、物品、任务、丹方、配方、对话
-│   ├── player.js           # 玩家物理、战斗、镜头、捏人参数
-│   ├── actors.js           # NPC、妖兽、首领、宠物与 AI
-│   ├── side.js             # 悬赏、护送、灵田、垂钓、灵环、声望
-│   ├── trial.js            # 秘境五层试炼
-│   ├── ui.js               # HUD、地图、背包、对话、菜单
-│   ├── world.js            # 分块地形、植被实例、碰撞
-│   ├── height.js           # 高度场、群系、道路权重
-│   ├── build.js / build2.js # 村庄、城镇、遗迹、火山的程序化建筑
-│   ├── human/              # 程序化人物：SDF 拼装、绑定、动作、Worker
-│   ├── fx.js / particles.js # 技能特效、预警圈、粒子
-│   ├── sky.js / water.js   # 昼夜天空、云、水面反射
-│   ├── postfx.js           # 泛光与调色后处理
-│   ├── audio.js            # WebAudio 合成音效与环境声
-│   └── loot.js             # 装备品质、随机词条、精英词缀
-├── tests/                  # node:test 回归测试（30 项）
-├── docs/                   # 玩法、开发、部署文档与截图
-├── dist/game.js            # 构建产物（已提交，便于直接部署）
-└── .github/workflows/      # GitHub Pages 自动部署
-```
-
-> 目录以实际文件为准；`build/` 与 `node_modules/` 不入库。
-
-## 技术实现
-
-| 方面 | 做法 |
-| --- | --- |
-| 渲染 | three.js r187，WebGL2，ACES 色调映射、泛光、调色与暗角 |
-| 世界 | 以 64 m 为块流式生成地形；远景低模、树木/岩石实例化、GPU 草地 |
-| 人物 | 运行时用 SDF 图元拼装网格，Worker 生成，程序化骨骼动作与布料飘带 |
-| 贴图 | 全部由 Canvas 2D 程序化绘制，无外部图片 |
-| 音频 | WebAudio 振荡器与噪声合成，无音频文件 |
-| 打包 | esbuild，两段构建：人物 Worker → 文本内联 → 单文件 IIFE |
-| 存档 | `localStorage`，自动保存 + 手动保存，无后端 |
-| 测试 | `node:test` + esbuild 在 Node 里直接跑游戏逻辑（30 项） |
-
-构建后只有一个 `dist/game.js`，天然适合静态托管。
-
-## 开发与调试
-
-```bash
-npm run dev        # 监听构建 + 本地服务（:8000）
-npm run build      # 生产构建
-npm run build:dev  # 带 sourcemap 的构建
-npm test           # 运行 30 项回归测试
-```
-
-URL 参数：
-
-| 参数 | 作用 |
-| --- | --- |
-| `?q=0` / `?q=1` / `?q=2` | 流畅 / 均衡 / 极致画质 |
-| `?auto=1` | 跳过标题直接新开一局 |
-| `?auto=2` | 读取存档继续 |
-| `?cam=x,y,z,tx,ty,tz&hour=17.5` | 自由镜头与时辰，用于截图 |
-
-浏览器控制台里的 `window.G` 提供 `tp()`、`view()`、`cheat()`、`skip()`、`loot()`、`meteor()` 等调试方法，详见[开发文档](docs/development.md)。
+---
 
 ## 文档
 
-| 文档 | 内容 |
+| | |
 | --- | --- |
 | [玩法指南](docs/gameplay.md) | 完整玩法、数值、任务路线与版本边界（含剧透） |
-| [开发文档](docs/development.md) | 架构、模块职责、构建、调试接口、测试与技术债 |
-| [部署说明](docs/deployment.md) | GitHub Pages 的两种部署方式与常见问题 |
+| [开发文档](docs/development.md) | 架构、模块职责、构建流程、调试接口、技术债 |
+| [部署说明](docs/deployment.md) | GitHub Pages 两种部署方式与排错 |
 | [更新日志](CHANGELOG.md) | 版本记录 |
 
 ## 已知限制
 
 - 单人离线 Demo，无联机、无账号、无云存档。
-- 修炼上限为**金丹初期**；金丹之后的内容尚未实现。
-- 需要键盘 + 鼠标，暂不适配触屏。
-- 存档跟随浏览器与访问地址；`localhost` 与 GitHub Pages 的存档互不相通。
-- 代码以 Demo 为目标，`main.js` 较大，尚未做模块级拆分。
-
-## 制作
-
-- 设计与代码：在 **Fable 5.2** 与 **Opus 5.5** 辅助下完成，经人工试玩、调参与回归测试。
-- 引擎：[three.js](https://threejs.org/)（MIT）。
-- 构建：[esbuild](https://esbuild.github.io/)（MIT）。
-- 场景、角色、贴图与音效均为程序化生成；若你发现与某作品相似，欢迎指出。
+- 修炼上限为**金丹初期**。
+- 需要键鼠，未适配触屏与手柄。
+- 代码以 Demo 为目标，`main.js` 仍偏大，尚未做模块级拆分。
 
 ## License
 
 [MIT](LICENSE) © 2026 binghong
+
+<div align="center">
+<sub>Made with <strong>Fable 5.2</strong> &amp; <strong>Opus 5.5</strong> · three.js · esbuild</sub>
+</div>
