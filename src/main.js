@@ -713,6 +713,8 @@ addEventListener('beforeunload', () => { if (ui.started && !player.dead && !trib
 const focus = new THREE.Vector3(0, 2, 0);
 loadAround(0, 0);
 ui.showTitle(Game.hasSave());
+const boot = document.getElementById('boot');
+if (boot) { requestAnimationFrame(() => { boot.style.opacity = '0'; setTimeout(() => boot.remove(), 700); }); }
 window.G = { renderer, scene, camera, world, sky, water, colliders, pois, mats, fx, game, player, actors, ui, input, audio, weather, meteors, tele };
 window.G.view = (x, y, z, tx, ty, tz, h) => { debugCam = true; camera.position.set(x, y, z); camera.lookAt(tx, ty, tz); focus.set(tx, ty, tz); if (h !== undefined) game.s.hour = h; loadAround(tx, tz); return 'ok'; };
 window.G.play = () => { debugCam = false; return 'ok'; };

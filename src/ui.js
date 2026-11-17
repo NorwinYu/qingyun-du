@@ -152,7 +152,7 @@ const CSS = `
 #creator .go{display:flex;justify-content:space-between;margin-top:16px}#creator .go .btn{font-size:16px;padding:7px 22px}
 #creator p{font-size:12px;color:#a8a090;text-align:center;margin:10px 0 0}
 #title{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:auto;background:radial-gradient(ellipse at center,rgba(8,8,20,.15) 0,rgba(8,8,20,.72) 100%)}
-#title h1{margin:0;font-size:92px;letter-spacing:26px;padding-left:26px;color:#ffe9a0;font-weight:900;text-shadow:5px 5px 0 #1a1420,0 0 40px rgba(255,190,70,.7)}
+#title h1{margin:0;font-size:104px;letter-spacing:38px;padding-left:38px;color:#ffe9a0;font-weight:900;text-shadow:5px 5px 0 #1a1420,0 0 40px rgba(255,190,70,.7)}
 #title h3{margin:8px 0 46px;font-size:20px;letter-spacing:12px;font-weight:400}
 #title .btn{font-size:20px;padding:10px 46px;margin:7px;letter-spacing:6px;min-width:280px;text-align:center}
 #chapter{position:absolute;left:0;right:0;top:30%;text-align:center;opacity:0;transition:opacity 1.2s;pointer-events:none}
@@ -193,7 +193,7 @@ const HTML = `
 <div id="alch" class="modal px"><span class="x">✕</span><h2>炼丹炉</h2><div id="recs"></div></div>
 <div id="forge" class="modal px"><span class="x">✕</span><h2>地火熔炉</h2><div id="frecs"></div></div>
 <div id="map" class="modal px"><span class="x">✕</span><h2>山河舆图</h2><div id="mapbody"><canvas id="wmap" width="512" height="512"></canvas><div id="plist"></div></div></div>
-<div id="menu" class="modal px"><span class="x">✕</span><h2>青云问道</h2>
+<div id="menu" class="modal px"><span class="x">✕</span><h2>青云渡</h2>
  <div class="row"><span>画质</span><div class="opts" data-opt="quality"><span class="btn" data-v="0">流畅</span><span class="btn" data-v="1">均衡</span><span class="btn" data-v="2">极致</span></div></div>
  <div class="row"><span>音量</span><input id="vol" type="range" min="0" max="100" style="flex:1;pointer-events:auto"></div>
  <div class="row"><span class="btn" id="m-save">保存进度</span><span class="btn" id="m-home">回村（脱离卡死）</span><span class="btn" id="m-reset">重新开始</span></div>
@@ -206,7 +206,7 @@ const HTML = `
 <div id="board" class="modal px"><span class="x">✕</span><h2 id="bdt">悬赏榜</h2><div id="bdb"></div></div>
 <div id="fade"></div><div id="bt"></div><div id="call"></div>
 <div id="creator" class="px"><h2>入 道</h2><div id="cr-rows"></div><div class="go"><span class="btn" id="cr-back">返回</span><span class="btn" id="cr-go">踏入仙途</span></div><p>拖动画面可旋转人物</p></div>
-<div id="title"><h1>青云问道</h1><h3 class="sh">御 剑 乘 风 · 开 放 世 界</h3><span class="btn" id="t-new">踏入仙途</span><span class="btn" id="t-cont" style="display:none">继续修行</span>
+<div id="title"><h1>青云渡</h1><h3 class="sh">御 剑 乘 风 · 渡 劫 长 生</h3><span class="btn" id="t-new">踏入仙途</span><span class="btn" id="t-cont" style="display:none">继续修行</span>
  <p class="sh">WASD 移动 · 鼠标视角 · 左键连斩 · Q 剑气 · V 瞬身 · E 交互 · C 打坐 · B 突破 · Tab 行囊 · M 舆图 · Esc 菜单<br>点击画面锁定鼠标</p></div>
 `;
 const MAPCOL = { [K.GRASS]: [86, 150, 72], [K.SAND]: [214, 198, 142], [K.ROCK]: [136, 136, 134], [K.SNOW]: [238, 242, 248], [K.PATH]: [186, 156, 108], [K.PAVE]: [164, 164, 172], [K.FARM]: [150, 118, 62], [K.BED]: [58, 120, 192], [K.ASH]: [92, 78, 72] };

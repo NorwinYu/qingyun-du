@@ -3,15 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>青云问道 · 开放世界修仙</title>
+<title>青云渡 · 3D 开放世界修仙</title>
+<meta name="description" content="青云渡 —— 一个运行在浏览器里的 3D 开放世界修仙 Demo。御剑、渡劫、炼丹、秘境，从凡人一路修到金丹。">
+<meta name="theme-color" content="#12101c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="青云渡 · 3D 开放世界修仙">
+<meta property="og:description" content="御剑乘风，渡劫长生。纯前端 three.js 打造的 3D 开放世界修仙 Demo。">
+<meta property="og:image" content="docs/screenshots/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
-html, body { margin: 0; height: 100%; overflow: hidden; background: #000; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #05060a; }
 #game { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#boot {
+  position: fixed; inset: 0; z-index: 9; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 22px;
+  background: radial-gradient(ellipse at 50% 40%, #1b1830 0%, #08070f 70%);
+  color: #e8d9a8; font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  transition: opacity .6s ease;
+}
+#boot .ring {
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 2px solid rgba(255, 224, 150, .16); border-top-color: #ffd870;
+  animation: spin 1.1s linear infinite;
+}
+#boot p { margin: 0; font-size: 13px; letter-spacing: 6px; opacity: .82; }
+@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
 <canvas id="game"></canvas>
 <div id="ui"></div>
+<div id="boot"><div class="ring"></div><p>正在开辟山河</p></div>
 <script src="dist/game.js"></script>
 </body>
 </html>
